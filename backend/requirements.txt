@@ -12,3 +12,4 @@ fastapi
 fastapi-responses
 fastapi-middleware
 fastapi-cors
+uvicorn

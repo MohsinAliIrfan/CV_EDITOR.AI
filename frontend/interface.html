@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV.AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="response.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">CV.AI</h1>
+    <p class="subtitle">Get the magic done</p>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Enter URL</h2>
+          <p class="card-description">Process your CV from a URL</p>
+        </div>
+        <div class="card-content">
+          <label for="url" class="label">Enter URL</label>
+          <input type="text" id="url" placeholder="https://example.com/your-cv.pdf" class="input">
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Upload CV</h2>
+          <p class="card-description">Upload and process your CV file</p>
+        </div>
+        <div class="card-content">
+          <label for="cv-upload" class="label">Upload your CV</label>
+          <input type="file" id="cv-upload" accept=".pdf,.doc,.docx" class="input">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="magic-button-container">
+      <button class="magic-button">
+        <span class="icon-wand"></span> Magic
+      </button>
+      <button id="download-cv" class="download-button" style="display: none;">
+        Download CV
+      </button>
+    </div>
+
+<div class="card chat-card">
+  <div class="card-header">
+    <h2 class="card-title">Chat</h2>
+    <p class="card-description"></p>
+  </div>
+  <div id="messageDisplay" class="message-display"></div>
+  <div class="card-content">
+    <label for="chat-input" class="label">Start a conversation</label>
+    <input type="text" id="chat-input" placeholder="Type your message here..." class="input">
+    <button class="chat-button">
+      <span class="icon-chat"></span> Send Message
+    </button>
+  </div>
+</div>
+    <div id="notification"></div>
+  </div>
+</body>
+</html>

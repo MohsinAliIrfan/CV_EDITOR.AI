@@ -49,8 +49,6 @@ class ProjectManager(CVCconverter):
             job_description = Extract_Job_Description(extracted_text).runAgent()
             if job_description != 'NO JOB DESCRIPTION':
                 self.job_description = job_description
-                if self.save_file("\n JOB DESCRIPTION:\n "+job_description):
-                    print("\nSuccessfuly saved he job description into the file...")
                 return job_description
             counter += 1
         return None
@@ -62,8 +60,6 @@ class ProjectManager(CVCconverter):
             print("\n Length of keywords: ", len(keywords))
             if len(keywords) <= 45:
                 self.extracted_keywords = keywords
-                if self.save_file("\n\n Extracted Keywords from job description:\n" + str(keywords)):
-                    print("\nSuccessfuly saved the extracted keywords into the file")
                 return keywords
             counter += 1
             print("\n Number of keywords exceeds the limit, Trying again...")
@@ -100,8 +96,6 @@ class ProjectManager(CVCconverter):
             try:
                 final_output_dict = ast.literal_eval(final_output)
                 self.words_changed = final_output
-                if self.save_file("\n\n Changes/output in of the code: " + final_output):
-                    print("\nSucessfuly saved the optimized output into the file")
                 return final_output_dict
             except Exception as e:
                 counter += 1
@@ -141,8 +135,6 @@ class ProjectManager(CVCconverter):
         else:
             self.cv_text = cv_text
             print("\n\n THIS IS THE CV TEXT: ", cv_text)
-            if self.save_file("\nCV TEXT:\n"+ cv_text):
-                print("\n Saved the cv text into the output file")
 
         # Extract text from the webpage
         extracted_text = self.extract_web_page()

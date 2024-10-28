@@ -1,2 +1,14 @@
-pip install langchain-core==0.2.39
-pip install -qU langchain-groq
+langchain
+langchain-core==0.2.39
+langchain-community
+-qU langchain-groq
+pdf2docx
+python-docx
+python-dotenv
+requests
+beautifulsoup4
+bs4
+fastapi
+fastapi-responses
+fastapi-middleware
+fastapi-cors

@@ -2,7 +2,6 @@ from docx import Document
 import docx
 import os
 
-
 class ExtractTextFromCV():
     def __init__(self) -> None:
         file_path = os.path.join(os.path.dirname(__file__), '..', 'cvs_pdf_and_doc', 'Output.docx')
